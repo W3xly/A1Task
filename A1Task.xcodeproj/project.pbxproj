@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		B45B9D9526CA7FD6008699DE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9D9426CA7FD6008699DE /* ListViewModel.swift */; };
 		B45B9D9726CA7FDC008699DE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9D9626CA7FDC008699DE /* ListViewController.swift */; };
 		B45B9D9A26CA80C3008699DE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9D9926CA80C3008699DE /* Card.swift */; };
+		B45B9D9D26CA82B7008699DE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B45B9D9C26CA82B7008699DE /* Alamofire */; };
+		B45B9DA026CA82ED008699DE /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B45B9D9F26CA82ED008699DE /* PromiseKit */; };
+		B45B9DA326CA82FD008699DE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B45B9DA226CA82FD008699DE /* SDWebImage */; };
 		B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */; };
 		B4ECB17826CA7A0A00782548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17726CA7A0A00782548 /* Assets.xcassets */; };
 		B4ECB17B26CA7A0A00782548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17926CA7A0A00782548 /* LaunchScreen.storyboard */; };
@@ -37,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45B9DA326CA82FD008699DE /* SDWebImage in Frameworks */,
+				B45B9D9D26CA82B7008699DE /* Alamofire in Frameworks */,
+				B45B9DA026CA82ED008699DE /* PromiseKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +138,11 @@
 			dependencies = (
 			);
 			name = A1Task;
+			packageProductDependencies = (
+				B45B9D9C26CA82B7008699DE /* Alamofire */,
+				B45B9D9F26CA82ED008699DE /* PromiseKit */,
+				B45B9DA226CA82FD008699DE /* SDWebImage */,
+			);
 			productName = A1Task;
 			productReference = B4ECB16B26CA7A0A00782548 /* A1Task.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +170,11 @@
 				Base,
 			);
 			mainGroup = B4ECB16226CA7A0A00782548;
+			packageReferences = (
+				B45B9D9B26CA82B7008699DE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				B45B9D9E26CA82ED008699DE /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				B45B9DA126CA82FD008699DE /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = B4ECB16C26CA7A0A00782548 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -385,6 +401,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B45B9D9B26CA82B7008699DE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		B45B9D9E26CA82ED008699DE /* XCRemoteSwiftPackageReference "PromiseKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mxcl/PromiseKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.15.3;
+			};
+		};
+		B45B9DA126CA82FD008699DE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B45B9D9C26CA82B7008699DE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B45B9D9B26CA82B7008699DE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		B45B9D9F26CA82ED008699DE /* PromiseKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B45B9D9E26CA82ED008699DE /* XCRemoteSwiftPackageReference "PromiseKit" */;
+			productName = PromiseKit;
+		};
+		B45B9DA226CA82FD008699DE /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B45B9DA126CA82FD008699DE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B4ECB16326CA7A0A00782548 /* Project object */;
 }
