@@ -14,6 +14,10 @@ final class ListViewModel {
     init(coordinator: ListCoordinator, viewController: ListViewControllerActions) {
         self.coordinator = coordinator
         self.viewController = viewController
+
+        _ = ApiService.manager.getMurlocs().done { cards in
+            print(cards.map { $0.name })
+        }
     }
 }
 

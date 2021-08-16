@@ -16,6 +16,9 @@
 		B45B9D9D26CA82B7008699DE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B45B9D9C26CA82B7008699DE /* Alamofire */; };
 		B45B9DA026CA82ED008699DE /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = B45B9D9F26CA82ED008699DE /* PromiseKit */; };
 		B45B9DA326CA82FD008699DE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = B45B9DA226CA82FD008699DE /* SDWebImage */; };
+		B45B9DA626CA835F008699DE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DA526CA835F008699DE /* ApiService.swift */; };
+		B45B9DA826CA8363008699DE /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DA726CA8363008699DE /* ApiRouter.swift */; };
+		B45B9DAA26CA850B008699DE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DA926CA850B008699DE /* Config.swift */; };
 		B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */; };
 		B4ECB17826CA7A0A00782548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17726CA7A0A00782548 /* Assets.xcassets */; };
 		B4ECB17B26CA7A0A00782548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17926CA7A0A00782548 /* LaunchScreen.storyboard */; };
@@ -28,6 +31,9 @@
 		B45B9D9426CA7FD6008699DE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		B45B9D9626CA7FDC008699DE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B45B9D9926CA80C3008699DE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B45B9DA526CA835F008699DE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		B45B9DA726CA8363008699DE /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
+		B45B9DA926CA850B008699DE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B4ECB16B26CA7A0A00782548 /* A1Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A1Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4ECB17726CA7A0A00782548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +98,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		B45B9DA426CA8346008699DE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B45B9DA526CA835F008699DE /* ApiService.swift */,
+				B45B9DA726CA8363008699DE /* ApiRouter.swift */,
+				B45B9DA926CA850B008699DE /* Config.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B4ECB16226CA7A0A00782548 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +127,7 @@
 		B4ECB16D26CA7A0A00782548 /* A1Task */ = {
 			isa = PBXGroup;
 			children = (
+				B45B9DA426CA8346008699DE /* Services */,
 				B45B9D9826CA80B7008699DE /* Models */,
 				B45B9D8D26CA7D60008699DE /* Launch */,
 				B45B9D8A26CA7D25008699DE /* Architecture */,
@@ -205,8 +222,11 @@
 				B45B9D9326CA7FD2008699DE /* ListCoordinator.swift in Sources */,
 				B45B9D9A26CA80C3008699DE /* Card.swift in Sources */,
 				B45B9D9726CA7FDC008699DE /* ListViewController.swift in Sources */,
+				B45B9DA826CA8363008699DE /* ApiRouter.swift in Sources */,
 				B45B9D8F26CA7D69008699DE /* AppCoordinator.swift in Sources */,
 				B45B9D8C26CA7D33008699DE /* Coordinator.swift in Sources */,
+				B45B9DAA26CA850B008699DE /* Config.swift in Sources */,
+				B45B9DA626CA835F008699DE /* ApiService.swift in Sources */,
 				B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
