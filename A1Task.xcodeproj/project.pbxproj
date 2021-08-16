@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B45B9D8C26CA7D33008699DE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9D8B26CA7D33008699DE /* Coordinator.swift */; };
 		B45B9D8F26CA7D69008699DE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9D8E26CA7D69008699DE /* AppCoordinator.swift */; };
+		B45B9D9326CA7FD2008699DE /* ListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9D9226CA7FD2008699DE /* ListCoordinator.swift */; };
+		B45B9D9526CA7FD6008699DE /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9D9426CA7FD6008699DE /* ListViewModel.swift */; };
+		B45B9D9726CA7FDC008699DE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9D9626CA7FDC008699DE /* ListViewController.swift */; };
 		B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */; };
 		B4ECB17826CA7A0A00782548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17726CA7A0A00782548 /* Assets.xcassets */; };
 		B4ECB17B26CA7A0A00782548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17926CA7A0A00782548 /* LaunchScreen.storyboard */; };
@@ -17,6 +20,9 @@
 /* Begin PBXFileReference section */
 		B45B9D8B26CA7D33008699DE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B45B9D8E26CA7D69008699DE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		B45B9D9226CA7FD2008699DE /* ListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCoordinator.swift; sourceTree = "<group>"; };
+		B45B9D9426CA7FD6008699DE /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		B45B9D9626CA7FDC008699DE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		B4ECB16B26CA7A0A00782548 /* A1Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A1Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4ECB17726CA7A0A00782548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +58,24 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		B45B9D9026CA7E47008699DE /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B45B9D9126CA7FC9008699DE /* List */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B45B9D9126CA7FC9008699DE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				B45B9D9226CA7FD2008699DE /* ListCoordinator.swift */,
+				B45B9D9426CA7FD6008699DE /* ListViewModel.swift */,
+				B45B9D9626CA7FDC008699DE /* ListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		B4ECB16226CA7A0A00782548 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +97,7 @@
 			children = (
 				B45B9D8D26CA7D60008699DE /* Launch */,
 				B45B9D8A26CA7D25008699DE /* Architecture */,
+				B45B9D9026CA7E47008699DE /* Scenes */,
 				B4ECB17726CA7A0A00782548 /* Assets.xcassets */,
 				B4ECB17926CA7A0A00782548 /* LaunchScreen.storyboard */,
 				B4ECB17C26CA7A0A00782548 /* Info.plist */,
@@ -149,6 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45B9D9526CA7FD6008699DE /* ListViewModel.swift in Sources */,
+				B45B9D9326CA7FD2008699DE /* ListCoordinator.swift in Sources */,
+				B45B9D9726CA7FDC008699DE /* ListViewController.swift in Sources */,
 				B45B9D8F26CA7D69008699DE /* AppCoordinator.swift in Sources */,
 				B45B9D8C26CA7D33008699DE /* Coordinator.swift in Sources */,
 				B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */,

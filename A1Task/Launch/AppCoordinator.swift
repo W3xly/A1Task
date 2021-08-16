@@ -11,8 +11,14 @@ final class AppCoordinator {
 
     var window: UIWindow?
 
-    init() {}
+    init() {
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+    }
 
-    func start() {}
+    func start() {
+        let listCoordinator = ListCoordinator(type: .replaceWindow, inputData: ListInputData())
+        listCoordinator.start()
+    }
 }
 
