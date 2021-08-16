@@ -19,6 +19,7 @@
 		B45B9DA626CA835F008699DE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DA526CA835F008699DE /* ApiService.swift */; };
 		B45B9DA826CA8363008699DE /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DA726CA8363008699DE /* ApiRouter.swift */; };
 		B45B9DAA26CA850B008699DE /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DA926CA850B008699DE /* Config.swift */; };
+		B45B9DAD26CA892F008699DE /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DAC26CA892F008699DE /* UIView+Extensions.swift */; };
 		B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */; };
 		B4ECB17826CA7A0A00782548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17726CA7A0A00782548 /* Assets.xcassets */; };
 		B4ECB17B26CA7A0A00782548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17926CA7A0A00782548 /* LaunchScreen.storyboard */; };
@@ -34,6 +35,7 @@
 		B45B9DA526CA835F008699DE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		B45B9DA726CA8363008699DE /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		B45B9DA926CA850B008699DE /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B45B9DAC26CA892F008699DE /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		B4ECB16B26CA7A0A00782548 /* A1Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A1Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4ECB17726CA7A0A00782548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		B45B9DAB26CA8921008699DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B45B9DAC26CA892F008699DE /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B4ECB16226CA7A0A00782548 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 				B45B9D8D26CA7D60008699DE /* Launch */,
 				B45B9D8A26CA7D25008699DE /* Architecture */,
 				B45B9D9026CA7E47008699DE /* Scenes */,
+				B45B9DAB26CA8921008699DE /* Extensions */,
 				B4ECB17726CA7A0A00782548 /* Assets.xcassets */,
 				B4ECB17926CA7A0A00782548 /* LaunchScreen.storyboard */,
 				B4ECB17C26CA7A0A00782548 /* Info.plist */,
@@ -228,6 +239,7 @@
 				B45B9DAA26CA850B008699DE /* Config.swift in Sources */,
 				B45B9DA626CA835F008699DE /* ApiService.swift in Sources */,
 				B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */,
+				B45B9DAD26CA892F008699DE /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

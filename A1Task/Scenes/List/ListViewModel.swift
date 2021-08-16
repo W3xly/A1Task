@@ -11,12 +11,18 @@ final class ListViewModel {
     private let coordinator: ListCoordinator
     private weak var viewController: ListViewControllerActions?
 
+    var cards: [Card] = []
+    var numberOfRows: Int {
+        return cards.count
+    }
+
     init(coordinator: ListCoordinator, viewController: ListViewControllerActions) {
         self.coordinator = coordinator
         self.viewController = viewController
 
         _ = ApiService.manager.getMurlocs().done { cards in
-            print(cards.map { $0.name })
+            self.cards = cards
+            self.viewController?.reloadTableView()
         }
     }
 }
