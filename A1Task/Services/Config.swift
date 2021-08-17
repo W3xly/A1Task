@@ -16,3 +16,6 @@ let rapidApiKeyHeader = HTTPHeader(value: "a4e901e98dmsh749094c7a96a7f3p199444js
                              key: "x-rapidapi-key")
 let rapidApiHostHeader = HTTPHeader(value: "omgvamp-hearthstone-v1.p.rapidapi.com",
                                    key: "x-rapidapi-host")
+
+public let Defaults = UserDefaults.standard
+public let DEFAULTS_SORTING = "sorting"

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum SortingOption {
+enum SortingOption: Int {
     case manaCost
     case attack
     case health
@@ -30,6 +30,7 @@ final class ListViewModel {
 
             // Removing duplicate card by name
             self.cards = cards.removingDuplicates(byKey: { $0.name })
+            self.sortBy(option: SortingOption(rawValue: Defaults.integer(forKey: DEFAULTS_SORTING)) ?? .manaCost)
             self.viewController?.reloadTableView()
         }
     }
@@ -37,12 +38,14 @@ final class ListViewModel {
     func sortBy(option: SortingOption) {
         switch option {
         case .manaCost:
-            cards = cards.sorted(by: { $0.cost ?? 0 < $1.cost ?? 0 })
+            cards = cards.sorted(by: { $0.cost ?? 0 > $1.cost ?? 0 })
         case .attack:
-            cards = cards.sorted(by: { $0.attack ?? 0 < $1.attack ?? 0 })
+            cards = cards.sorted(by: { $0.attack ?? 0 > $1.attack ?? 0 })
         case .health:
-            cards = cards.sorted(by: { $0.health ?? 0 < $1.health ?? 0 })
+            cards = cards.sorted(by: { $0.health ?? 0 > $1.health ?? 0 })
         }
+
+        Defaults.setValue(option.rawValue, forKey: DEFAULTS_SORTING)
         viewController?.reloadTableView()
     }
 }
