@@ -23,6 +23,9 @@
 		B45B9DB026CA8A03008699DE /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DAF26CA8A03008699DE /* ListTableViewCell.swift */; };
 		B45B9DB226CA98D0008699DE /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DB126CA98D0008699DE /* Array+Extensions.swift */; };
 		B45B9DB426CA9935008699DE /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B9DB326CA9935008699DE /* UIImageView+Extensions.swift */; };
+		B485D13026CBA06500B1B9FF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D12F26CBA06500B1B9FF /* DetailViewController.swift */; };
+		B485D13226CBA06D00B1B9FF /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D13126CBA06D00B1B9FF /* DetailViewModel.swift */; };
+		B485D13426CBA07B00B1B9FF /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485D13326CBA07B00B1B9FF /* DetailCoordinator.swift */; };
 		B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */; };
 		B4ECB17826CA7A0A00782548 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17726CA7A0A00782548 /* Assets.xcassets */; };
 		B4ECB17B26CA7A0A00782548 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4ECB17926CA7A0A00782548 /* LaunchScreen.storyboard */; };
@@ -42,6 +45,9 @@
 		B45B9DAF26CA8A03008699DE /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		B45B9DB126CA98D0008699DE /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
 		B45B9DB326CA9935008699DE /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		B485D12F26CBA06500B1B9FF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B485D13126CBA06D00B1B9FF /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		B485D13326CBA07B00B1B9FF /* DetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
 		B4ECB16B26CA7A0A00782548 /* A1Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = A1Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4ECB16E26CA7A0A00782548 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4ECB17726CA7A0A00782548 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 		B45B9D9026CA7E47008699DE /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				B485D12E26CBA05300B1B9FF /* Detail */,
 				B45B9D9126CA7FC9008699DE /* List */,
 				B45B9DAE26CA89DF008699DE /* Cells */,
 			);
@@ -133,6 +140,16 @@
 				B45B9DAF26CA8A03008699DE /* ListTableViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		B485D12E26CBA05300B1B9FF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B485D12F26CBA06500B1B9FF /* DetailViewController.swift */,
+				B485D13126CBA06D00B1B9FF /* DetailViewModel.swift */,
+				B485D13326CBA07B00B1B9FF /* DetailCoordinator.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		B4ECB16226CA7A0A00782548 = {
@@ -258,8 +275,11 @@
 				B45B9DAA26CA850B008699DE /* Config.swift in Sources */,
 				B45B9DB226CA98D0008699DE /* Array+Extensions.swift in Sources */,
 				B45B9DA626CA835F008699DE /* ApiService.swift in Sources */,
+				B485D13426CBA07B00B1B9FF /* DetailCoordinator.swift in Sources */,
+				B485D13026CBA06500B1B9FF /* DetailViewController.swift in Sources */,
 				B4ECB16F26CA7A0A00782548 /* AppDelegate.swift in Sources */,
 				B45B9DAD26CA892F008699DE /* UIView+Extensions.swift in Sources */,
+				B485D13226CBA06D00B1B9FF /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
