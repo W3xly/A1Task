@@ -9,6 +9,9 @@ import UIKit
 
 protocol ListViewControllerActions: AnyObject {
     func reloadTableView()
+    func startLoading()
+    func stopLoading()
+    func showError(with message: String?)
 }
 
 final class ListViewController: UIViewController {
@@ -26,12 +29,19 @@ final class ListViewController: UIViewController {
         return button
     }()
 
+    let activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .gray)
+        indicator.hidesWhenStopped = true
+        return indicator
+    }()
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         configureUI()
+        viewModel.viewDidLoad()
     }
 
     // MARK: - Helpers
@@ -44,6 +54,10 @@ final class ListViewController: UIViewController {
         view.addSubview(tableView)
         tableView.anchor(top: view.topAnchor, left: view.leftAnchor,
                          bottom: view.bottomAnchor, right: view.rightAnchor)
+
+        view.addSubview(activityIndicator)
+        activityIndicator.centerX(inView: view)
+        activityIndicator.centerY(inView: view)
     }
 
     func setupTableView() {
@@ -80,6 +94,21 @@ final class ListViewController: UIViewController {
 }
 
 extension ListViewController: ListViewControllerActions {
+    func showError(with message: String?) {
+        let alert = UIAlertController(title: "Loading cards failed!",
+                                      message: message,
+                                      preferredStyle: UIAlertController.Style.alert)
+        self.present(alert, animated: true)
+    }
+
+    func startLoading() {
+        activityIndicator.startAnimating()
+    }
+
+    func stopLoading() {
+        activityIndicator.stopAnimating()
+    }
+
     func reloadTableView() {
         tableView.reloadData()
     }

@@ -16,10 +16,3 @@ extension NSAttributedString {
 
 
 }
-
-extension String {
-    func attributedString(bold: Bool = false) -> NSAttributedString {
-        return NSAttributedString(string: self,
-                                  attributes: [.font: bold ? UIFont.boldSystemFont(ofSize: 16) : UIFont.systemFont(ofSize: 16)])
-    }
-}

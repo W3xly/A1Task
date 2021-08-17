@@ -25,13 +25,25 @@ final class ListViewModel {
     init(coordinator: ListCoordinator, viewController: ListViewControllerActions) {
         self.coordinator = coordinator
         self.viewController = viewController
+    }
+
+    func viewDidLoad() {
+        getCards()
+    }
+
+    func getCards() {
+        viewController?.startLoading()
 
         _ = ApiService.manager.getMurlocs().done { cards in
-
-            // Removing duplicate card by name
+            // Remove duplicate cards by name
             self.cards = cards.removingDuplicates(byKey: { $0.name })
+
             self.sortBy(option: SortingOption(rawValue: Defaults.integer(forKey: DEFAULTS_SORTING)) ?? .manaCost)
             self.viewController?.reloadTableView()
+            self.viewController?.stopLoading()
+        }.catch { error in
+            self.viewController?.showError(with: error.localizedDescription)
+            self.viewController?.stopLoading()
         }
     }
 
