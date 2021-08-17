@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Card: Codable {
+struct Card: Codable, Hashable {
+
     let cardId: String?
     let name: String?
     let type: String?
@@ -16,4 +17,9 @@ struct Card: Codable {
     let health: Int?
     let race: String
     let img: String?
+
+    var imgURL: URL? {
+        guard let stringURL = img else { return nil }
+        return URL(string: stringURL)
+    }
 }

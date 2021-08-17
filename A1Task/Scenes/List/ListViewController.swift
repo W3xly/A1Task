@@ -34,6 +34,7 @@ final class ListViewController: UIViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.showsVerticalScrollIndicator = false
+        tableView.register(ListTableViewCell.self, forCellReuseIdentifier: "ListTableViewCell")
     }
 }
 
@@ -43,7 +44,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell") as? ListTableViewCell else { return UITableViewCell() }
+
+        cell.selectionStyle = .none
+        cell.setupCell(with: viewModel.cards[indexPath.row])
+        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

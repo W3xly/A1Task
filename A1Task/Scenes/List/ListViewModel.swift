@@ -21,7 +21,9 @@ final class ListViewModel {
         self.viewController = viewController
 
         _ = ApiService.manager.getMurlocs().done { cards in
-            self.cards = cards
+
+            // Removing duplicate card by name
+            self.cards = cards.removingDuplicates(byKey: { $0.name })
             self.viewController?.reloadTableView()
         }
     }
