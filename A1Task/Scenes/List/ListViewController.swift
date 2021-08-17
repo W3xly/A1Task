@@ -24,6 +24,7 @@ final class ListViewController: UIViewController {
     }
 
     private func configureUI() {
+        title = "Murlocs"
         view.addSubview(tableView)
         tableView.anchor(top: view.topAnchor, left: view.leftAnchor,
                          bottom: view.bottomAnchor, right: view.rightAnchor)
@@ -53,6 +54,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let coordinator = DetailCoordinator(type: .modal(self), inputData: DetailInputData(card: viewModel.cards[indexPath.row]))
+        coordinator.start()
     }
 }
 

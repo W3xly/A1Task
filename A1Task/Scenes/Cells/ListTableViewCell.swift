@@ -69,7 +69,6 @@ class ListTableViewCell: UITableViewCell {
         nameLabel.numberOfLines = 0
 
         [nameLabel, manaLabel, attackLabel, healthLabel].forEach {
-            $0.textColor = .black
             $0.font = UIFont(name: "Chalkboard SE", size: 16)
         }
     }

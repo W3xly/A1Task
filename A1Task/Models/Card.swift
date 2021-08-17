@@ -17,6 +17,9 @@ struct Card: Codable, Hashable {
     let health: Int?
     let race: String
     let img: String?
+    let playerClass: String?
+    let rarity: String?
+    let cardSet: String?
 
     var imgURL: URL? {
         guard let stringURL = img else { return nil }

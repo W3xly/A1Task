@@ -12,7 +12,7 @@ typealias JSONDictionary = [String: Any]
 
 enum ApiRouter: URLRequestConvertible {
 
-    private static let baseURL = "https://omgvamp-hearthstone-v1.p.rapidapi.com/cards/races/"
+    private static let baseURL = "https://omgvamp-hearthstone-v1.p.rapidapi.com/"
 
     case getMurlocs
 
@@ -28,7 +28,7 @@ enum ApiRouter: URLRequestConvertible {
         let path: String = {
             switch self {
             case .getMurlocs:
-                return "murloc"
+                return "cards/races/murloc"
             }
         }()
 

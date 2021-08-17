@@ -7,7 +7,9 @@
 
 import UIKit
 
-struct DetailInputData {}
+struct DetailInputData {
+    let card: Card
+}
 
 final class DetailCoordinator: Coordinator<DetailInputData> {
 
@@ -15,7 +17,7 @@ final class DetailCoordinator: Coordinator<DetailInputData> {
 
     func start() {
         let viewController = DetailViewController()
-        viewController.viewModel = DetailViewModel(coordinator: self, viewController: viewController)
+        viewController.viewModel = DetailViewModel(coordinator: self, viewController: viewController, inputData: inputData)
 
         switch type {
         case .modal:
