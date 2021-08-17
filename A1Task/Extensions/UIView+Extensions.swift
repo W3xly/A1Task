@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: - Anchor function
+
 extension UIView {
 
     func anchor(top: NSLayoutYAxisAnchor? = nil,
@@ -80,4 +82,21 @@ extension UIView {
     }
 }
 
+// MARK: - Orientation
 
+extension UIView {
+    
+    enum DeviceOrientation {
+        case portrait
+        case landscape
+    }
+
+    var deviceOrientation: DeviceOrientation {
+        if UIDevice.current.orientation == .landscapeLeft ||
+            UIDevice.current.orientation == .landscapeRight {
+            return .landscape
+         } else {
+            return .portrait
+         }
+    }
+}

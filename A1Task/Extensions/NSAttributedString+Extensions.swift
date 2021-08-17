@@ -13,6 +13,4 @@ extension NSAttributedString {
         string.append(rhs)
         return NSAttributedString(attributedString: string)
     }
-
-
 }
