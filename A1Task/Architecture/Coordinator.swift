@@ -45,7 +45,7 @@ class CoordinatorSuperclass<InputDataType> {
         self.inputData = inputData
     }
 
-    // MARK: - Lifecycle
+    // MARK: - Presentation
 
     func presentByModal(viewController: UIViewController, animated: Bool = true) {
         if case .modal(let sourceViewController) = type {
@@ -74,4 +74,17 @@ class CoordinatorSuperclass<InputDataType> {
                 assertionFailure("You are trying to present scene by replaceWindow, but you didnt initialized its Coordinator as window replacement.")
             }
         }
+
+    // MARK: - Dismissal
+
+    func stop() {
+        switch type {
+        case .modal(let sourceViewController):
+            sourceViewController.dismiss(animated: true)
+        case .push(let navigationController):
+            navigationController.popViewController(animated: true)
+        default:
+            assertionFailure("CoordinatorType [\(type)] does not have implemented stop method.")
+        }
+    }
 }
